@@ -148,6 +148,14 @@ ul.plain li{margin-bottom:8px}
 .size-grid p{margin:0 0 15px;font-size:16px}
 .size-grid p:last-child{margin-bottom:0}
 .side-h{font-family:var(--head);font-weight:600;font-size:18px;color:var(--navy);margin:0 0 12px}
+/* Featured guide cards inside the Blogs tab. */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:20px}
+.blog-card{border:1px solid var(--line);background:#fff;padding:22px 24px;display:flex;flex-direction:column;gap:9px}
+.blog-card:hover{border-color:var(--tint-line)}
+.blog-card .k{font-family:var(--head);font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.blog-card .t{font-family:var(--head);font-weight:600;font-size:17px;line-height:1.3;color:var(--navy)}
+.blog-card p{margin:0;font-size:15px;line-height:1.6}
+.blog-card .more{margin-top:auto;padding-top:10px;font-family:var(--head);font-weight:600;font-size:14px}
 @media(max-width:860px){.size-grid{grid-template-columns:1fr;gap:28px}}
 .press{display:flex;gap:40px;flex-wrap:wrap;align-items:center;justify-content:center}
 .press a{font-family:var(--head);font-weight:700;font-size:22px;color:var(--navy);letter-spacing:.02em}
@@ -685,10 +693,14 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
 
   var RES_TABS=[["about","About Us"],["faq","Frequently Asked Questions"],["blogs","Blogs"]];
   var ABOUT="Organized Living manufactures home storage and closet organization systems and sells them through a nationwide dealer network and a direct shop. The company was founded in 1919 in Norwood, Ohio, remains third-generation family owned, and manufactures at a 680,000 square foot facility in Bloomington, Indiana. It is a manufacturer rather than an installer or a custom closet company.";
+  // Excerpts deliberately carry no figure that already appears on this page.
   var BLOGS=[
-    ["How to organize a small linen closet","/homeowners/blog/how-to-organize-a-small-linen-closet"],
-    ["How to organize a deep linen closet","/homeowners/blog/how-to-organize-a-deep-linen-closet"],
-    ["How to fold and store towels and bedding","/homeowners/blog/how-to-fold-and-store-towels-and-bedding"]
+    ["How to organize a small linen closet","/homeowners/blog/how-to-organize-a-small-linen-closet",
+     "Where to gain shelves in a closet that has no room to spare, and what to move out of it entirely."],
+    ["How to organize a deep linen closet","/homeowners/blog/how-to-organize-a-deep-linen-closet",
+     "Reaching the back half without unpacking the front, and the point where a basket beats a shelf."],
+    ["How to fold and store towels and bedding","/homeowners/blog/how-to-fold-and-store-towels-and-bedding",
+     "Folding a sheet set so the stack stays countable, and which fold survives being pulled from."]
   ];
   var S={cat:0,sys:0,panel:0,layout:0,guide:"buying",res:"about"};
   function el(id){return document.getElementById(id);}
@@ -759,9 +771,13 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
     if(S.res==="about"){
       p.innerHTML='<h4>Who builds these systems</h4><p style="max-width:84ch;margin:0">'+esc(ABOUT)+'</p>';
     } else if(S.res==="blogs"){
-      p.innerHTML='<h4>Linen Closet Guides</h4><ul class="plain">'+BLOGS.map(function(b){
-        return '<li><a href="'+b[1]+'">'+esc(b[0])+'</a></li>';
-      }).join("")+'</ul>';
+      p.innerHTML='<h4>Linen Closet Guides</h4><div class="blog-grid">'+BLOGS.map(function(b){
+        return '<a class="blog-card" href="'+b[1]+'">'+
+          '<span class="k">Guide</span>'+
+          '<span class="t">'+esc(b[0])+'</span>'+
+          '<p>'+esc(b[2])+'</p>'+
+          '<span class="more">Read the guide &rarr;</span></a>';
+      }).join("")+'</div>';
     } else {
       p.innerHTML='<div class="faq-tabs sub-tabs" id="faqTabs" role="tablist"></div><div class="faq-list" id="faqList"></div>';
       renderGuides();
