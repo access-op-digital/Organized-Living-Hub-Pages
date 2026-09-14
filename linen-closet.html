@@ -47,10 +47,13 @@ header.site nav a.cta{background:var(--blue);color:var(--white);padding:13px 24p
 header.site nav a.cta:hover{background:var(--navy)}
 
 /* hero */
-.hero{position:relative;padding:0}
-.hero>img{width:100%;height:460px;object-fit:cover;display:block}
+/* The hero grows with its content. The image and veil are absolute backdrops
+   and .inner sits in normal flow, so long copy extends the section instead of
+   overflowing a fixed-height image and clipping the H1. */
+.hero{position:relative;padding:0;min-height:460px;display:flex;align-items:center;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .hero .veil{position:absolute;inset:0;background:rgba(14,59,148,.82)}
-.hero .inner{position:absolute;inset:0;display:flex;align-items:center;padding:0 var(--pad)}
+.hero .inner{position:relative;width:100%;display:flex;align-items:center;padding:52px var(--pad)}
 .hero .box{max-width:var(--wrap);margin:0 auto;width:100%;display:flex;flex-direction:column;gap:16px;color:var(--white)}
 .hero .crumb{font-size:14px;color:var(--tint-line)}
 .hero h1{font-weight:700;font-size:58px;line-height:1.05}
@@ -118,6 +121,11 @@ ul.plain li{margin-bottom:8px}
 .faq-tab{margin:0;padding:16px 20px;cursor:pointer;border:1px solid var(--line);border-bottom:none;font-family:var(--head);font-weight:600;font-size:16px;text-align:center;background:var(--white);color:var(--navy);flex:1;min-width:180px}
 .faq-tab[aria-selected="true"]{background:var(--navy);color:var(--white);border-color:var(--navy)}
 .faq-list{border:1px solid var(--line);padding:8px 28px 18px}
+.res-panel{border:1px solid var(--line);background:#fff;padding:30px 32px}
+.res-panel>p:first-child{margin-top:0}
+.res-panel .sub-tabs{display:flex;flex-wrap:wrap;margin:0 0 -1px}
+.res-panel .faq-list{border:1px solid var(--line)}
+.res-panel h4{font-family:var(--head);font-weight:600;font-size:19px;color:var(--navy);margin:0 0 10px}
 .press{display:flex;gap:40px;flex-wrap:wrap;align-items:center;justify-content:center}
 .press a{font-family:var(--head);font-weight:700;font-size:22px;color:var(--navy);letter-spacing:.02em}
 footer.site{background:var(--navy);color:var(--white);padding:52px var(--pad) 34px}
@@ -128,6 +136,21 @@ footer.site h4{font-family:var(--head);font-size:12px;letter-spacing:.08em;text-
 footer.site ul{list-style:none;margin:0;padding:0;font-size:15px;line-height:2}
 footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-size:13px;color:var(--tint-line)}
 .updated{font-size:14px;color:var(--muted);margin-top:24px}
+.slider{position:relative}
+.slider-head{display:flex;justify-content:flex-end;gap:8px;margin-bottom:16px}
+.slider-btn{width:42px;height:42px;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:50%;cursor:pointer;font:inherit;font-size:20px;line-height:1;display:grid;place-items:center;transition:background .15s,color .15s,border-color .15s}
+.slider-btn:hover:not(:disabled){background:var(--navy);color:#fff;border-color:var(--navy)}
+.slider-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.slider-btn:disabled{opacity:.3;cursor:default}
+/* Two deliberate omissions here, both verified against the rendered page:
+   snap is proximity rather than mandatory, because mandatory drags every
+   programmatic scroll back to the nearest snap point; and scroll-behavior is
+   NOT set in CSS, because it swallows scrollBy/scrollTo entirely. Smoothing is
+   applied from JS instead, where it can be passed per call. */
+.slider-track{display:flex;align-items:stretch;gap:24px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-ms-overflow-style:none;padding:2px}
+.slider-track::-webkit-scrollbar{display:none}
+.slider-track:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.slider-track>.card{flex:0 0 min(292px,78vw);scroll-snap-align:start}
 @media(max-width:980px){
   :root{--pad:24px}
   .panel-shell{grid-template-columns:1fr}
@@ -135,7 +158,7 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
   .panel-img img{min-height:280px}
   .layout-body{grid-template-columns:1fr}
   .hero h1{font-size:38px}
-  .hero>img{height:520px}
+  .hero .inner{padding-block:44px}
   .sec-head h2{font-size:28px}
   .panel-copy{padding:26px}
 }
@@ -166,8 +189,8 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
   <img src="https://organizedliving.com/images/default-source/home/products/ventilated.jpg" alt="White reach-in linen closet with ventilated wire shelving holding folded towels" />
   <div class="veil"></div>
   <div class="inner"><div class="box">
-    <div class="crumb">Home &nbsp;/&nbsp; Products &nbsp;/&nbsp; Linen Closet Systems</div>
-    <h1>Linen Closet Systems</h1>
+    <div class="crumb">Home &nbsp;/&nbsp; Products &nbsp;/&nbsp; Linen Closet</div>
+    <h1>Linen Closet</h1>
     <div class="rule"></div>
     <h2>Modular, Built-In and Fixed Ventilated Wire Systems</h2>
     <p>Organized Living manufactures linen closet systems in three construction families: modular rail shelving that adjusts without tools, built-in wood systems finished like cabinetry, and fixed ventilated wire that brackets straight to the wall. Each system combines shelves, baskets, drawers and rods to hold folded towels, sheet sets and bathroom supplies inside the 15 to 24 inches of depth a standard linen closet allows. The company has manufactured storage systems since 1919 and builds them at a 680,000 square foot facility in Bloomington, Indiana, where the load ratings are tested: Lifetime ventilated wire carries up to 75 pounds per linear foot and Shelftech up to 45. Those load figures, the finish specifications and the warranty terms are all published on this site, and orders ship across the United States and Canada in 3 to 5 business days.</p>
@@ -329,12 +352,18 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
       <h2>Why Choose Organized Living for Your Linen Closet</h2><div class="rule"></div>
       <p>Four of the five reasons below are specific to linen rather than to closets generally, because folded linen loads a shelf differently from anything else a household stores.</p>
     </div>
-    <div class="grid-3">
+    <div class="slider">
+      <div class="slider-head">
+        <button class="slider-btn" type="button" data-dir="prev" aria-label="Previous reasons">&#8249;</button>
+        <button class="slider-btn" type="button" data-dir="next" aria-label="Next reasons">&#8250;</button>
+      </div>
+      <div class="slider-track" tabindex="0" role="region" aria-label="Reasons to choose Organized Living for a linen closet">
       <div class="card"><h3>Rated for Stacked Linen Weight</h3><p>Folded linen loads a shelf harder per foot than hanging clothes, and the published ratings are sized for exactly that: 75 pounds per linear foot on Lifetime ventilated wire, 45 on Shelftech. Both figures come from testing rather than from the design drawing, and both are published on the product pages.</p></div>
       <div class="card"><h3>Airflow Around Stored Linens</h3><p>Ventilated wire moves air around towels and bedding inside a closed closet, which a solid shelf cannot manage. That is why wire remains standard in linen storage long after it has been replaced elsewhere in the house.</p></div>
       <div class="card"><h3>Adjustable Shelf Spacing</h3><p>Sheet sets, folded towels and bulky duvets each need a different clearance, and a rail system holds all three without settling on a compromise height. Spacing changes as the contents change, with no new holes in the wall.</p></div>
       <div class="card"><h3>Built for Shallow and Narrow Closets</h3><p>Linen closets are rarely walk-ins, and the range is built for the depths they actually are. Shelf and bracket sizes cover the shallow hallway closet and the narrow run instead of assuming the dimensions of a wardrobe.</p></div>
       <div class="card"><h3>Manufactured in Bloomington Since 1919</h3><p>Organized Living has manufactured storage systems since 1919 and remains third-generation family owned. Production runs from a 680,000 square foot facility in Bloomington, Indiana, which is also where the testing happens.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -411,21 +440,13 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
 
 <section id="resources" class="band">
   <div class="wrap">
-    <div class="sec-head"><h2>Resources and Guides on Linen Closets</h2><div class="rule"></div></div>
+    <div class="sec-head">
+      <h2>Resources and Guides on Linen Closets</h2><div class="rule"></div>
+      <p>Who builds these systems, the answers to the questions asked most often, and the guides worth reading before you measure.</p>
+    </div>
 
-    <h3 style="font-family:var(--head);font-weight:600;font-size:22px;color:var(--navy);margin-bottom:10px">About Us</h3>
-    <p style="max-width:84ch;margin:0 0 34px">Organized Living manufactures home storage and closet organization systems and sells them through a nationwide dealer network and a direct shop. The company was founded in 1919 in Norwood, Ohio, remains third-generation family owned, and manufactures at a 680,000 square foot facility in Bloomington, Indiana. It is a manufacturer rather than an installer or a custom closet company.</p>
-
-    <h3 style="font-family:var(--head);font-weight:600;font-size:22px;color:var(--navy);margin-bottom:14px">Frequently Asked Questions</h3>
-    <div class="faq-tabs" id="faqTabs" role="tablist"></div>
-    <div class="faq-list" id="faqList"></div>
-
-    <h3 style="font-family:var(--head);font-weight:600;font-size:22px;color:var(--navy);margin:34px 0 10px">Linen Closet Guides</h3>
-    <ul class="plain">
-      <li><a href="/homeowners/blog/how-to-organize-a-small-linen-closet">How to organize a small linen closet</a></li>
-      <li><a href="/homeowners/blog/how-to-organize-a-deep-linen-closet">How to organize a deep linen closet</a></li>
-      <li><a href="/homeowners/blog/how-to-fold-and-store-towels-and-bedding">How to fold and store towels and bedding</a></li>
-    </ul>
+    <div class="faq-tabs" id="resTabs" role="tablist"></div>
+    <div class="res-panel" id="resPanel"></div>
 
     <p class="updated">Guidance reviewed by <a href="/company/team">[Reviewer name, role]</a>. Last updated <time datetime="2026-09-15">15 September 2026</time>.</p>
   </div>
@@ -480,7 +501,7 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
 {"@type":"BreadcrumbList","itemListElement":[
 {"@type":"ListItem","position":1,"name":"Home","item":"https://organizedliving.com/"},
 {"@type":"ListItem","position":2,"name":"Closet Systems","item":"https://organizedliving.com/closet-systems"},
-{"@type":"ListItem","position":3,"name":"Linen Closet Systems","item":"https://organizedliving.com/linen-closet"}]},
+{"@type":"ListItem","position":3,"name":"Linen Closet","item":"https://organizedliving.com/linen-closet"}]},
 {"@type":"ItemList","name":"Linen closet systems","itemListElement":[
 {"@type":"ListItem","position":1,"name":"freedomRail"},
 {"@type":"ListItem","position":2,"name":"freedomRail EDGE"},
@@ -603,7 +624,14 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
   };
   var GUIDE_TABS=[["buying","Buying and delivery"],["choosing","Choosing a system"],["install","Installation and warranty"]];
 
-  var S={cat:0,sys:0,panel:0,layout:0,guide:"buying"};
+  var RES_TABS=[["about","About Us"],["faq","Frequently Asked Questions"],["blogs","Blogs"]];
+  var ABOUT="Organized Living manufactures home storage and closet organization systems and sells them through a nationwide dealer network and a direct shop. The company was founded in 1919 in Norwood, Ohio, remains third-generation family owned, and manufactures at a 680,000 square foot facility in Bloomington, Indiana. It is a manufacturer rather than an installer or a custom closet company.";
+  var BLOGS=[
+    ["How to organize a small linen closet","/homeowners/blog/how-to-organize-a-small-linen-closet"],
+    ["How to organize a deep linen closet","/homeowners/blog/how-to-organize-a-deep-linen-closet"],
+    ["How to fold and store towels and bedding","/homeowners/blog/how-to-fold-and-store-towels-and-bedding"]
+  ];
+  var S={cat:0,sys:0,panel:0,layout:0,guide:"buying",res:"about"};
   function el(id){return document.getElementById(id);}
   function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");}
 
@@ -662,6 +690,25 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
     }).join("");
   }
 
+  // Resources is three top-level tabs: who builds this, the questions asked
+  // most often, and the guides. The FAQ tab carries its own sub-tabs beneath.
+  function renderResources(){
+    el("resTabs").innerHTML=RES_TABS.map(function(t){
+      return '<button class="faq-tab" role="tab" aria-selected="'+(t[0]===S.res)+'" data-res="'+t[0]+'">'+esc(t[1])+'</button>';
+    }).join("");
+    var p=el("resPanel");
+    if(S.res==="about"){
+      p.innerHTML='<h4>Who builds these systems</h4><p style="max-width:84ch;margin:0">'+esc(ABOUT)+'</p>';
+    } else if(S.res==="blogs"){
+      p.innerHTML='<h4>Linen Closet Guides</h4><ul class="plain">'+BLOGS.map(function(b){
+        return '<li><a href="'+b[1]+'">'+esc(b[0])+'</a></li>';
+      }).join("")+'</ul>';
+    } else {
+      p.innerHTML='<div class="faq-tabs sub-tabs" id="faqTabs" role="tablist"></div><div class="faq-list" id="faqList"></div>';
+      renderGuides();
+    }
+  }
+
   document.addEventListener("click",function(e){
     var t;
     if((t=e.target.closest(".cat-tab"))){S.cat=+t.dataset.i;S.sys=0;S.panel=0;renderTypes();return;}
@@ -669,13 +716,65 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
     if((t=e.target.closest("#pPanels .acc button"))){
       var i=+t.parentNode.dataset.i; S.panel=(S.panel===i?-1:i); renderTypes(); return;}
     if((t=e.target.closest(".layout-tab"))){S.layout=+t.dataset.i;renderLayout();return;}
+    if((t=e.target.closest("[data-res]"))){S.res=t.dataset.res;renderResources();return;}
     if((t=e.target.closest(".faq-tab"))){S.guide=t.dataset.id;renderGuides();return;}
     if((t=e.target.closest("#faqList .acc button"))){
       var acc=t.parentNode, on=acc.classList.toggle("open");
       t.setAttribute("aria-expanded",on); t.querySelector(".s").textContent=on?"–":"+"; return;}
   });
 
-  renderTypes(); renderLayout(); renderGuides();
+  // Horizontal card sliders. Cards are equal-width flex items with scroll
+  // snapping, so a set that does not divide evenly into the row never leaves
+  // an orphan card stranded on a second line.
+  var smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  Array.prototype.forEach.call(document.querySelectorAll(".slider"), function(s){
+    var track=s.querySelector(".slider-track");
+    var prev=s.querySelector('[data-dir="prev"]');
+    var next=s.querySelector('[data-dir="next"]');
+    if(!track||!prev||!next) return;
+    function step(){
+      var c=track.querySelector(".card");
+      return c ? c.getBoundingClientRect().width + 24 : 300;
+    }
+    function sync(){
+      var max=track.scrollWidth-track.clientWidth;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max-2;
+      // Nothing to scroll (wide viewport, few cards): hide the controls.
+      var overflows = max > 2;
+      prev.hidden = !overflows;
+      next.hidden = !overflows;
+    }
+    // Ask for a smooth scroll, then verify it actually happened and land it
+    // directly if not. Checked against the rendered page: CSS scroll-behavior
+    // swallows programmatic scrolls outright (so it is not set), and some
+    // engines run neither scrollTo's smooth option nor requestAnimationFrame.
+    // Setting scrollLeft always works, so that is the guaranteed floor.
+    function go(dir){
+      var max=track.scrollWidth-track.clientWidth;
+      var before=track.scrollLeft;
+      var target=Math.max(0, Math.min(max, before + dir*step()));
+      if(Math.abs(target-before) < 2) return;
+      try{
+        if(smooth && typeof track.scrollTo === "function"){
+          track.scrollTo({left:target, behavior:"smooth"});
+        } else {
+          track.scrollLeft = target;
+        }
+      }catch(e){ track.scrollLeft = target; }
+      setTimeout(function(){
+        if(Math.abs(track.scrollLeft - before) < 2) track.scrollLeft = target;
+        sync();
+      }, 360);
+    }
+    prev.addEventListener("click",function(){go(-1);});
+    next.addEventListener("click",function(){go(1);});
+    track.addEventListener("scroll",sync,{passive:true});
+    window.addEventListener("resize",sync);
+    sync();
+  });
+
+  renderTypes(); renderLayout(); renderResources();
 })();
 </script>
 </body>
