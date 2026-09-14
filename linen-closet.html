@@ -126,6 +126,16 @@ ul.plain li{margin-bottom:8px}
 .res-panel .sub-tabs{display:flex;flex-wrap:wrap;margin:0 0 -1px}
 .res-panel .faq-list{border:1px solid var(--line)}
 .res-panel h4{font-family:var(--head);font-weight:600;font-size:19px;color:var(--navy);margin:0 0 10px}
+/* Process chain: raw material through to the published figure. */
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px;margin-top:6px}
+.flow-step{position:relative;padding-top:54px}
+.flow-step .n{position:absolute;top:0;left:0;width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--head);font-weight:700;font-size:14px;z-index:1}
+.flow-step:not(:last-child)::after{content:"";position:absolute;top:17px;left:46px;right:-26px;height:2px;background:var(--tint-line)}
+.flow-step .lbl{font-family:var(--head);font-weight:600;font-size:17px;color:var(--navy);margin-bottom:6px}
+.flow-step p{margin:0;font-size:15.5px;line-height:1.65}
+.flow-figure{font-family:var(--head);font-weight:700;font-size:22px;color:var(--blue);line-height:1.2;margin-bottom:4px}
+.flow-note{margin-top:30px;padding:16px 20px;background:#fff;border-left:3px solid var(--blue);font-size:15.5px;max-width:82ch}
+@media(max-width:980px){.flow-step:not(:last-child)::after{display:none}.flow-step{padding-top:48px}}
 .press{display:flex;gap:40px;flex-wrap:wrap;align-items:center;justify-content:center}
 .press a{font-family:var(--head);font-weight:700;font-size:22px;color:var(--navy);letter-spacing:.02em}
 footer.site{background:var(--navy);color:var(--white);padding:52px var(--pad) 34px}
@@ -370,24 +380,36 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
 
 <section id="testing" class="band">
   <div class="wrap">
-    <div class="sec-head"><h2>How Organized Living Builds and Tests Linen Closet Shelving</h2><div class="rule"></div></div>
-    <div class="grid-2">
-      <div><p style="margin:0">Every load rating on this page comes from internal engineering and quality testing at the Bloomington, Indiana facility, covering weight and load capacity, durability, performance and overall product quality. Organized Living holds no third party product certifications, so the evidence offered here is the published specification, the testing behind it and the warranty, not a certification mark. Each of those documents is available on this site.</p></div>
-      <div><p style="margin:0">The material record is documented rather than claimed. Steel products use approximately 95 to 97 percent recycled steel content. Thermally fused laminate contains 90 to 100 percent post-industrial recovered content plus 5 percent recycled post-consumer content. Steel shelving and hardware carry a proprietary epoxy powder hybrid coating whose process is designed to produce zero waste and zero release of harmful volatile organic compounds.</p></div>
+    <div class="sec-head">
+      <h2>How Organized Living Builds and Tests Linen Closet Shelving</h2><div class="rule"></div>
+      <p>Every load figure on this page was measured at the Bloomington, Indiana facility, not taken from a design drawing. Four steps run from raw steel to the published rating.</p>
     </div>
-    <div class="tbl-scroll" style="margin-top:30px">
-      <table class="spec">
-        <thead><tr><th>Specification</th><th>Published figure</th></tr></thead>
-        <tbody>
-          <tr><td>Lifetime ventilated wire load</td><td>Up to 75 lbs per linear foot</td></tr>
-          <tr><td>Shelftech load</td><td>Up to 45 lbs per linear foot</td></tr>
-          <tr><td>Recycled steel content</td><td>Approximately 95 to 97 percent</td></tr>
-          <tr><td>Thermally fused laminate</td><td>90 to 100 percent post-industrial recovered, plus 5 percent post-consumer</td></tr>
-          <tr><td>Coating process</td><td>Epoxy powder hybrid, zero waste and zero VOC release</td></tr>
-          <tr><td>Manufacturing</td><td>Bloomington, Indiana, 680,000 sq ft</td></tr>
-        </tbody>
-      </table>
+
+    <div class="flow">
+      <div class="flow-step">
+        <span class="n">01</span>
+        <div class="lbl">Material</div>
+        <p>Steel is 95 to 97 percent recycled. Laminate is 90 to 100 percent post-industrial recovered, plus 5 percent post-consumer.</p>
+      </div>
+      <div class="flow-step">
+        <span class="n">02</span>
+        <div class="lbl">Coating</div>
+        <p>A proprietary epoxy powder hybrid, applied by a process designed to produce zero waste and zero VOC release.</p>
+      </div>
+      <div class="flow-step">
+        <span class="n">03</span>
+        <div class="lbl">Testing</div>
+        <p>Load capacity, durability and performance are measured in-house, at the 680,000 square foot plant that builds them.</p>
+      </div>
+      <div class="flow-step">
+        <span class="n">04</span>
+        <div class="lbl">Published</div>
+        <div class="flow-figure">75 / 45 lbs</div>
+        <p>Per linear foot on Lifetime ventilated wire and Shelftech. Warranty terms are published per line.</p>
+      </div>
     </div>
+
+    <p class="flow-note">Organized Living holds no third party product certifications. The evidence is this chain and the documents behind it, every one of them published on this site.</p>
   </div>
 </section>
 
