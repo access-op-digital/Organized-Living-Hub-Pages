@@ -135,6 +135,20 @@ ul.plain li{margin-bottom:8px}
 .flow-step p{margin:0;font-size:15.5px;line-height:1.65}
 .flow-figure{font-family:var(--head);font-weight:700;font-size:22px;color:var(--blue);line-height:1.2;margin-bottom:4px}
 @media(max-width:980px){.flow-step:not(:last-child)::after{display:none}.flow-step{padding-top:48px}}
+/* Size guide: dimension tiles above, then the spacing table beside the copy
+   that explains it. A two-column table across the full 1240px strands each
+   value miles from its label, so the table is held to one column. */
+.dims{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;margin:0 0 34px}
+.dim{border:1px solid var(--line);background:#fff;padding:22px 24px}
+.dim .k{font-family:var(--head);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.dim .v{font-family:var(--head);font-weight:700;font-size:26px;color:var(--blue);line-height:1.15}
+.dim .note{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.5}
+.size-grid{display:grid;grid-template-columns:minmax(300px,1.05fr) minmax(280px,1fr);gap:40px;align-items:start}
+.size-grid table.spec{background:#fff}
+.size-grid p{margin:0 0 15px;font-size:16px}
+.size-grid p:last-child{margin-bottom:0}
+.side-h{font-family:var(--head);font-weight:600;font-size:18px;color:var(--navy);margin:0 0 12px}
+@media(max-width:860px){.size-grid{grid-template-columns:1fr;gap:28px}}
 .press{display:flex;gap:40px;flex-wrap:wrap;align-items:center;justify-content:center}
 .press a{font-family:var(--head);font-weight:700;font-size:22px;color:var(--navy);letter-spacing:.02em}
 footer.site{background:var(--navy);color:var(--white);padding:52px var(--pad) 34px}
@@ -431,20 +445,46 @@ footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(25
 
 <section id="size-guide" class="band">
   <div class="wrap">
-    <div class="sec-head"><h2>Linen Closet Size Guide</h2><div class="rule"></div></div>
-    <p style="max-width:84ch;margin:0 auto 16px">A standard linen closet measures 15 to 24 inches deep, 30 to 36 inches wide and 60 to 80 inches high, with 16 to 20 inches the depth most commonly recommended so items do not disappear at the back. These figures are general market guidance for planning rather than Organized Living specifications, and any individual closet should be measured before ordering. Shelf dimensions for each product line are published on its specification sheet.</p>
-    <div class="tbl-scroll" style="margin:24px 0">
-      <table class="spec">
-        <thead><tr><th>What sits on the shelf</th><th>Clearance to allow</th></tr></thead>
-        <tbody>
-          <tr><td>Sheets and pillowcases</td><td>10 to 12 inches</td></tr>
-          <tr><td>Folded towels and washcloths</td><td>About 12 inches</td></tr>
-          <tr><td>Comforters, quilts and bulky bedding</td><td>16 to 18 inches</td></tr>
-        </tbody>
-      </table>
+    <div class="sec-head">
+      <h2>Linen Closet Size Guide</h2><div class="rule"></div>
+      <p>Measure your own closet before ordering. The figures below are planning guidance from the wider market rather than Organized Living specifications, and shelf dimensions for each product line are published on its specification sheet.</p>
     </div>
-    <p style="max-width:84ch;margin:0 auto 14px">Shelf spacing follows whatever goes on the shelf. Sheets and pillowcases need roughly 10 to 12 inches of clearance. Folded towels and washcloths need about 12 inches so stacks pull out without collapsing. Bulky bedding such as comforters and quilts needs 16 to 18 inches, which is why those items belong on the highest or lowest shelf rather than in the middle of a run.</p>
-    <p style="max-width:84ch;margin:0 auto">Shelf depth is the figure worth getting right. Past roughly 20 inches, anything at the back stops being reachable, and that is the point where a pull-out basket earns its cost instead of a deeper shelf.</p>
+
+    <div class="dims">
+      <div class="dim">
+        <div class="k">Depth</div>
+        <div class="v">15 to 24 in</div>
+        <div class="note">16 to 20 in is the usual recommendation</div>
+      </div>
+      <div class="dim">
+        <div class="k">Width</div>
+        <div class="v">30 to 36 in</div>
+        <div class="note">Two to four feet across</div>
+      </div>
+      <div class="dim">
+        <div class="k">Height</div>
+        <div class="v">60 to 80 in</div>
+        <div class="note">Often floor to ceiling</div>
+      </div>
+    </div>
+
+    <div class="size-grid">
+      <div>
+        <table class="spec">
+          <thead><tr><th>What goes on the shelf</th><th>Clearance</th></tr></thead>
+          <tbody>
+            <tr><td>Sheets and pillowcases</td><td>10 to 12 in</td></tr>
+            <tr><td>Folded towels and washcloths</td><td>About 12 in</td></tr>
+            <tr><td>Comforters, quilts and bulky bedding</td><td>16 to 18 in</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 class="side-h">Reading the numbers</h3>
+        <p>Spacing follows the contents, which is why bulky bedding belongs on the highest or lowest shelf rather than the middle of a run. Put it mid-wall and it forces every shelf above it wider than the towels need.</p>
+        <p>Depth is the figure worth getting right. Past roughly 20 inches the back of a shelf stops being reachable, and that is where a pull-out basket earns its cost instead of a deeper shelf.</p>
+      </div>
+    </div>
   </div>
 </section>
 
