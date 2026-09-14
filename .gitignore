@@ -1,0 +1,18 @@
+# Vercel
+.vercel
+
+# Working data that must never reach the remote: crawl exports, Search Console
+# downloads, client workbooks, credentials.
+data/
+*.xlsx
+*.csv
+.env
+.env.*
+
+# OS and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /
+
+# Staging only. The production pages live on organizedliving.com and every page
+# here carries a canonical pointing there, plus an X-Robots-Tag noindex header
+# set in vercel.json. Do not remove either without moving the page to production
+# first, or this host will compete with the live site for the same queries.
