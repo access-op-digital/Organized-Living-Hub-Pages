@@ -10,6 +10,14 @@ CSS, no build step, no framework, deployed on Vercel.
 | `index.html` | `/` | n/a, staging index | n/a |
 | `bedroom-closet.html` | `/bedroom-closet` | `organizedliving.com/bedroom-closet` | `bedroom closet` |
 | `linen-closet.html` | `/linen-closet` | `organizedliving.com/linen-closet` | `linen closet`, 9,900/mo |
+| `pantry-closet.html` | `/pantry-closet` | `organizedliving.com/pantry-closet` | `pantry closet` |
+| `laundry-closet.html` | `/laundry-closet` | `organizedliving.com/laundry-closet` | `laundry closet` |
+| `garage-closet.html` | `/garage-closet` | `organizedliving.com/garage-closet` | `garage closet` |
+| `office-closet.html` | `/office-closet` | `organizedliving.com/office-closet` | `office closet` |
+| `entry-closet.html` | `/entry-closet` | `organizedliving.com/entry-closet` | `entry closet` |
+| `basement-closet.html` | `/basement-closet` | `organizedliving.com/basement-closet` | `basement closet` |
+| `mudroom-closet.html` | `/mudroom-closet` | `organizedliving.com/mudroom-closet` | `mudroom closet` |
+| `kids-closet.html` | `/kids-closet` | `organizedliving.com/kids-closet` | `kids closet` |
 
 ## Local preview
 
@@ -30,6 +38,14 @@ design mapping is documented under `docs/bedroom/`. This page follows the
 approved Vercel sample's Playfair Display / Montserrat typography and brand
 palette. The existing linen page is unchanged.
 
+## Additional room pages
+
+The eight additional room pages use `closet-pages.css`, which extends the Bedroom
+design, and the same `bedroom-closet.js` interaction script. Each page contains its
+complete room-specific content in static HTML, including inactive tab panels and
+FAQ answers. The index links to all ten room pages. Source coverage, adaptation
+notes and verification are recorded under `docs/room-pages/`.
+
 ## Deploy
 
 Vercel builds this repo root as static files. Framework preset **Other**, build
@@ -45,7 +61,8 @@ preview URL.
   case-sensitive filesystem.
 - **Never link with the `.html` suffix.** `cleanUrls` is on, so Vercel redirects
   `/linen-closet.html` to `/linen-closet` and the redirect breaks anchors.
-- **Image and asset paths are absolute URLs** to `organizedliving.com`. These
+- **Image and asset paths are absolute URLs** to `organizedliving.com` or its
+  official shop image CDN. These
   pages are previews of production pages; pointing at the live asset host means
   the staging copy always shows what production would show, and no binaries need
   to live in this repo.

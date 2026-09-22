@@ -1,0 +1,183 @@
+[
+  {
+    "slug": "pantry-closet",
+    "source_h2": 15,
+    "source_headings": 68,
+    "source_faqs": 12,
+    "missing_headings": [],
+    "unresolved_fragments": [],
+    "unique_ids": true,
+    "second_person": [],
+    "output_bytes": 53258,
+    "sha256": "7d36c469915d2c87d112a7537e57f9aae81856816895c00cab88160f9d0b4dfc",
+    "source_path": "research/samples/pantry.txt",
+    "notes": [
+      "The downloaded pantry-shelving-content.docx has the same substantive content as research/samples/pantry.txt. Implemented at /pantry-closet as requested; the original target was /pantry-shelving.",
+      "Preserved 15 major source sections, six layout types, the six-row size guide, all named product systems and 12 FAQs. Removed unsupported superlatives, second-person wording and publishing instructions.",
+      "Corrected EDGE to garage/household gear scope instead of a finished shelf edge; retained a short named-product scope note rather than a pantry recommendation.",
+      "Corrected VUE to fixed thermally fused laminate shelving; Select and Classica to furniture-grade laminate. Fixed wire is not described as the highest-capacity product family.",
+      "Lifetime 75 lb/linear foot and Shelftech 45 lb/linear foot are qualified by installation requirements. Removed unsupported Shelftech tighter-wire claim and an extrapolated 300 lb shelf claim.",
+      "Removed universal cross-system accessory compatibility. OBox Chrome Basket with Glide requires the OBox 1 Shelf Unit; Over the Door accessories belong to their compatible host.",
+      "Retained source size figures as illustrative planning examples, including a 60-by-60-inch compact walk-in footprint, explicitly not a universal minimum or product specification.",
+      "Corrected 1919 to company history, 1976 to ventilated shelving launch; removed claims that storage systems were made in Bloomington since 1919.",
+      "Corrected online-shop scope to contiguous United States and 3–5 business days to warehouse dispatch, not arrival. Removed universal job-box/QR and installation-duration promises.",
+      "Restricted Design Tool claims to freedomRail and Select per the existing 2025 guide evidence. Preserved interactive planning, save/share and ordering routes.",
+      "Removed mathematically overlapping laminate recovery percentages and unverified whole-process zero-waste/zero-VOC claims. Retained general materials/coating/testing/specification coverage.",
+      "Replaced unconditional warranty replacement promises with applicable written terms. Featured-media statement follows the existing approved content and assets, without a new endorsement claim.",
+      "All images are exact manufacturer URLs observed in cached official HTML. Pantry illustrations include actual pantry photographs for freedomRail, Select, Classica, VUE, Lifetime and Shelftech.",
+      "Replaced unlinked proposed blog titles with useful existing official resources and internal size/system links. No new keywords, GPT analysis or ontology run was performed for this implementation."
+    ]
+  },
+  {
+    "slug": "laundry-closet",
+    "source_h2": 13,
+    "source_headings": 51,
+    "source_faqs": 8,
+    "missing_headings": [],
+    "unresolved_fragments": [],
+    "unique_ids": true,
+    "second_person": [],
+    "output_bytes": 47036,
+    "sha256": "24f75945280bab6ec737f2643721da03883fbe6425918145c37b108eec7e1e37",
+    "source_path": "outputs/laundry-closet/content.html",
+    "notes": [
+      "Implemented the already researched Laundry Closet content and sources; preserved all 13 H2 sections, five appliance/layout types, six size-table rows and eight FAQs.",
+      "Rewrote complete affected sentences and headings to remove you/your wording while retaining the substantive content and natural Organized Living/our voice.",
+      "Clarified VUE as fixed solid thermally fused laminate shelving; retained source requirements for appliance ventilation, controls, door/lid movement and service access.",
+      "Specified freedomRail and Select as Design Tool supported systems based on the existing 2025 guide evidence.",
+      "Preserved exact component dimensions and OBox/Valet Rod compatibility. Dimension table is a product/measurement checklist rather than universal appliance clearances.",
+      "Clarified 3–5 business days as warehouse dispatch, not arrival. Direct shop product shipping remains contiguous-US only; written warranty terms govern.",
+      "Images are exact manufacturer URLs observed in cached official product and laundry pages. The VUE image is labeled as a generic product detail, not a depicted laundry installation.",
+      "No new keyword, GPT or ontology run was performed; this is implementation of the previously delivered content."
+    ]
+  },
+  {
+    "slug": "garage-closet",
+    "source_h2": 13,
+    "source_headings": 45,
+    "source_faqs": 7,
+    "missing_headings": [],
+    "unresolved_fragments": [],
+    "unique_ids": true,
+    "second_person": [],
+    "output_bytes": 39503,
+    "sha256": "754adee67917b54b6a394871867c864e60d93d463201c12e8771611ae4d6e36f",
+    "source_path": "C:\\Users\\dilbd\\OneDrive\\Documents\\ChatGPT\\Organized Living\\outputs\\garage-closet\\content.html",
+    "notes": [
+      "Adapted the reviewed Garage draft; retained all 13 H2 families, six layout topics, kit comparison and seven FAQ answers.",
+      "Rephrased second-person sentences and added natural Organized Living/our voice; no new keywords or research claims.",
+      "Preserved EDGE product identity, component-specific installation caveats, contiguous-US shop coverage and dispatch timing.",
+      "Published warranty governs coverage; no limited-lifetime claim added."
+    ]
+  },
+  {
+    "slug": "office-closet",
+    "source_h2": 13,
+    "source_headings": 49,
+    "source_faqs": 7,
+    "missing_headings": [],
+    "unresolved_fragments": [],
+    "unique_ids": true,
+    "second_person": [],
+    "output_bytes": 48760,
+    "sha256": "7c028323411de661dacc65136721d3b68cebeff0e000b41c09d62fbc579c2aca",
+    "source_path": "C:\\Users\\dilbd\\OneDrive\\Documents\\ChatGPT\\Organized Living\\outputs\\office-closet\\content.html",
+    "notes": [
+      "Adapted the reviewed Office draft; retained all 13 H2 families, six layouts, two specification tables and seven FAQs.",
+      "Removed second-person language and tightened repeated design instructions without dropping subject coverage.",
+      "Preserved exact OBox accessory hosts, desktop dimensions, legal-size filing limitation and Rail-versus-shelf load distinction.",
+      "Retained installation, electrical-clearance, document-security and business-use warranty distinctions."
+    ]
+  },
+  {
+    "slug": "entry-closet",
+    "source_h2": 13,
+    "source_headings": 47,
+    "source_faqs": 7,
+    "missing_headings": [],
+    "unresolved_fragments": [],
+    "unique_ids": true,
+    "second_person": [],
+    "output_bytes": 46815,
+    "sha256": "7855788bd48f5cf5e6b7b6ce51be001df0b5681fbb69cce7a8d8d498d7597eab",
+    "source_path": "C:\\Users\\dilbd\\OneDrive\\Documents\\ChatGPT\\Organized Living\\batches\\entry-basement-mudroom-kids\\outputs\\entry-closet\\content.html",
+    "notes": [
+      "Used the newer Entry draft from the Entry/Basement/Mudroom/Kids batch, preserving all 13 H2 families, five layouts and seven FAQs.",
+      "Brand voice already satisfied the no-you requirement; no body copy rewritten.",
+      "Preserved Over the Door entry storage, 24-inch Reveal Upright spacing and exact Utility Hook host restrictions.",
+      "Entry use remains coat/visitor/drop-zone focused, with a separate mudroom link and distinction."
+    ]
+  },
+  {
+    "slug": "basement-closet",
+    "source_h2": 13,
+    "source_headings": 48,
+    "source_faqs": 7,
+    "missing_headings": [],
+    "unresolved_fragments": [],
+    "unique_ids": true,
+    "second_person": [],
+    "output_bytes": 46097,
+    "sha256": "f89abcbd49185cc14f0cdf2be87408913d18ce940203c5e3578a114cba010aee",
+    "source_path": "batches/entry-basement-mudroom-kids/outputs/basement-closet/content.html",
+    "notes": [
+      "Implements the final previously generated commercial content. No new keyword research, external GPT run or ontology generation was performed.",
+      "All 13 H2 families, 48 headings and 7 FAQs are retained. Source ledger contains 26 records.",
+      "Visible source copy, headings and link destinations are preserved verbatim. Removed only document, section and research-attribute wrappers.",
+      "Current implementation corrections: 0 copy edits; source copy already passed the prior factual and commercial-voice review.",
+      "Existing research explicitly records the external Frame Semantics Analyzer review as pending; implementation does not claim that missing review was completed.",
+      "The hero is explicitly labeled basement storage in the manufacturer’s freedomRail gallery.",
+      "Supporting room images are labeled as household storage, utility storage and game storage; their locations are not represented as basements.",
+      "Select and Classica remain scoped to suitable finished rooms with Dealer assessment. No moistureproofness is asserted.",
+      "The EDGE, VUE and wire image mappings support the shared renderer schema only; they must not add products or sections absent from this page’s source content."
+    ]
+  },
+  {
+    "slug": "mudroom-closet",
+    "source_h2": 13,
+    "source_headings": 47,
+    "source_faqs": 6,
+    "missing_headings": [],
+    "unresolved_fragments": [],
+    "unique_ids": true,
+    "second_person": [],
+    "output_bytes": 48757,
+    "sha256": "efec9cd562c9ede9ab5fa1e99c83df17bdc3279896deab74fafbcfd52b1269c6",
+    "source_path": "batches/entry-basement-mudroom-kids/outputs/mudroom-closet/content.html",
+    "notes": [
+      "Implements the final previously generated commercial content. No new keyword research, external GPT run or ontology generation was performed.",
+      "All 13 H2 families, 47 headings and 6 FAQs are retained. Source ledger contains 26 records.",
+      "Visible source copy, headings and link destinations are preserved verbatim. Removed only document, section and research-attribute wrappers.",
+      "Current implementation corrections: 0 copy edits; source copy already passed the prior factual and commercial-voice review.",
+      "Existing research explicitly records the external Frame Semantics Analyzer review as pending; implementation does not claim that missing review was completed.",
+      "The manufacturer labels the selected freedomRail and EDGE images as mudroom arrangements; the entry photo is labeled entry storage.",
+      "EDGE mudroom use is documented; its accessory compatibility remains specific to EDGE supports.",
+      "The bench FAQ requires a separately specified seating product. It makes no claim that a storage shelf or cabinet is a rated seat.",
+      "The source omits the EDGE Shelf Tower height because the listing contains conflicting values."
+    ]
+  },
+  {
+    "slug": "kids-closet",
+    "source_h2": 13,
+    "source_headings": 49,
+    "source_faqs": 8,
+    "missing_headings": [],
+    "unresolved_fragments": [],
+    "unique_ids": true,
+    "second_person": [],
+    "output_bytes": 47581,
+    "sha256": "d288b99cbedddd157088555ef53ccc6cbf665d97574d4e820ddebcc0c0a4b8b6",
+    "source_path": "batches/entry-basement-mudroom-kids/outputs/kids-closet/content.html",
+    "notes": [
+      "Implements the final previously generated commercial content. No new keyword research, external GPT run or ontology generation was performed.",
+      "All 13 H2 families, 49 headings and 8 FAQs are retained. Source ledger contains 23 records.",
+      "Visible source copy, headings and link destinations are preserved verbatim. Removed only document, section and research-attribute wrappers.",
+      "Current implementation corrections: 0 copy edits; source copy already passed the prior factual and commercial-voice review.",
+      "Existing research explicitly records the external Frame Semantics Analyzer review as pending; implementation does not claim that missing review was completed.",
+      "All hero and room images come from the manufacturer’s kids’ room gallery.",
+      "Reach guidance depends on the child, garment length and actual room measurements; no childproof certification or fixed age-based height is asserted.",
+      "The EDGE image mapping supports the shared renderer schema only; do not introduce EDGE as a kids’ closet offering.",
+      "Select and VUE product images illustrate their named product systems and are not labeled as kids’ installations."
+    ]
+  }
+]
