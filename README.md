@@ -8,17 +8,27 @@ CSS, no build step, no framework, deployed on Vercel.
 | File | Serves at | Target production URL | Primary query |
 | --- | --- | --- | --- |
 | `index.html` | `/` | n/a, staging index | n/a |
+| `bedroom-closet.html` | `/bedroom-closet` | `organizedliving.com/bedroom-closet` | `bedroom closet` |
 | `linen-closet.html` | `/linen-closet` | `organizedliving.com/linen-closet` | `linen closet`, 9,900/mo |
 
 ## Local preview
 
 ```
-python -m http.server 8000
+python preview.py --port 8000
 ```
 
-Then open `http://localhost:8000`. Use a server rather than opening the file
-directly: `cleanUrls` means production serves `/linen-closet` without the `.html`
-suffix, and only a server reproduces that.
+Then open `http://127.0.0.1:8000/bedroom-closet`. The included standard-library
+preview server resolves extensionless HTML paths like Vercel's `cleanUrls` and
+binds to the local computer only. No package installation is required.
+
+## Bedroom page
+
+`bedroom-closet.css` and `bedroom-closet.js` provide the page's responsive styles
+and keyboard-accessible tabs. Native disclosures work without JavaScript; all
+tab content remains readable when JavaScript is unavailable. The source and
+design mapping is documented under `docs/bedroom/`. This page follows the
+approved Vercel sample's Playfair Display / Montserrat typography and brand
+palette. The existing linen page is unchanged.
 
 ## Deploy
 
