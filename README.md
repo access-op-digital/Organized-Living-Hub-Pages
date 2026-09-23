@@ -18,6 +18,9 @@ CSS, no build step, no framework, deployed on Vercel.
 | `basement-closet.html` | `/basement-closet` | `organizedliving.com/basement-closet` | `basement closet` |
 | `mudroom-closet.html` | `/mudroom-closet` | `organizedliving.com/mudroom-closet` | `mudroom closet` |
 | `kids-closet.html` | `/kids-closet` | `organizedliving.com/kids-closet` | `kids closet` |
+| `faq.html` | `/faq` | `organizedliving.com/faq` | Product and project FAQs |
+| `testimonials.html` | `/testimonials` | `organizedliving.com/testimonials` | Builder and designer reviews |
+| `gallery.html` | `/gallery` | `organizedliving.com/gallery` | Closet project gallery |
 
 ## Local preview
 
@@ -45,6 +48,15 @@ design, and the same `bedroom-closet.js` interaction script. Each page contains 
 complete room-specific content in static HTML, including inactive tab panels and
 FAQ answers. The index links to all ten room pages. Source coverage, adaptation
 notes and verification are recorded under `docs/room-pages/`.
+
+## FAQ, testimonials and gallery
+
+The three support pages adapt the supplied `organized-living` repository's
+`faq-page` references to the same approved room-page brand. `support-pages.css`
+imports the shared brand stylesheet, while `support-pages.js` provides FAQ topic
+filters and direct-question linking. All 59 FAQ answers are in the HTML and use
+native disclosures. The three attributed quotations and six project records
+are preserved. See `docs/support-pages/` for source, adaptation and test records.
 
 ## Deploy
 

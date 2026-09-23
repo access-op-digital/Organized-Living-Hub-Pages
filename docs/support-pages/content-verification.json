@@ -1,0 +1,75 @@
+{
+  "support_pages": [
+    {
+      "page": "faq",
+      "http_status": 200,
+      "broken_local_routes": [],
+      "scripts_present": true,
+      "styles_present": true,
+      "schema_matches_visible_answers": true,
+      "questions_and_schema_count": [
+        59,
+        59
+      ],
+      "no_js_open_answers": 59
+    },
+    {
+      "page": "testimonials",
+      "http_status": 200,
+      "broken_local_routes": [],
+      "scripts_present": true,
+      "styles_present": true,
+      "quotes_and_attributions_preserved": true
+    },
+    {
+      "page": "gallery",
+      "http_status": 200,
+      "broken_local_routes": [],
+      "scripts_present": true,
+      "styles_present": true,
+      "all_project_records_preserved": true
+    }
+  ],
+  "room_pages": [
+    {
+      "page": "basement-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "bedroom-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "entry-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "garage-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "kids-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "laundry-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "linen-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "mudroom-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "office-closet",
+      "main_preserved": true
+    },
+    {
+      "page": "pantry-closet",
+      "main_preserved": true
+    }
+  ]
+}

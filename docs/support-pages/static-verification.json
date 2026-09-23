@@ -1,0 +1,38 @@
+[
+  {
+    "page": "faq",
+    "h1_count": 1,
+    "faq_count": 59,
+    "quote_count": 0,
+    "project_count": 0,
+    "unique_ids": true,
+    "unresolved_fragments": [],
+    "second_person": [],
+    "client_input_markers": false,
+    "sha256": "b8905d69c3e72539ebf61fc47bf0ab4086d1c58411805fba253e08e09a299b5b"
+  },
+  {
+    "page": "testimonials",
+    "h1_count": 1,
+    "faq_count": 0,
+    "quote_count": 3,
+    "project_count": 0,
+    "unique_ids": true,
+    "unresolved_fragments": [],
+    "second_person": [],
+    "client_input_markers": false,
+    "sha256": "b2cae8a3757a5c2e17f8dff53f4f9189601610b3a61cab7f800a02b4a1cf25fe"
+  },
+  {
+    "page": "gallery",
+    "h1_count": 1,
+    "faq_count": 0,
+    "quote_count": 0,
+    "project_count": 6,
+    "unique_ids": true,
+    "unresolved_fragments": [],
+    "second_person": [],
+    "client_input_markers": false,
+    "sha256": "678fd5759e577656bf15d8a60367cc88c8c0319d61398a64e8c843a25e4dda6b"
+  }
+]
