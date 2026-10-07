@@ -18,6 +18,7 @@ CSS, no build step, no framework, deployed on Vercel.
 | `basement-closet.html` | `/basement-closet` | `organizedliving.com/basement-closet` | `basement closet` |
 | `mudroom-closet.html` | `/mudroom-closet` | `organizedliving.com/mudroom-closet` | `mudroom closet` |
 | `kids-closet.html` | `/kids-closet` | `organizedliving.com/kids-closet` | `kids closet` |
+| `company/about-us.html` | `/company/about-us` | `organizedliving.com/company/about-us` | none, brand and trust page |
 
 ## Local preview
 
@@ -45,6 +46,14 @@ design, and the same `bedroom-closet.js` interaction script. Each page contains 
 complete room-specific content in static HTML, including inactive tab panels and
 FAQ answers. The index links to all ten room pages. Source coverage, adaptation
 notes and verification are recorded under `docs/room-pages/`.
+
+## About Us page
+
+`company/about-us.html` mirrors the production path, so it serves at `/company/about-us`. It reuses the room-page
+chrome and `closet-pages.css`, and adds `about-us.css` for the fact strip, the history timeline, the values grid,
+the division cards and the dealer quotes. The page carries Organization, AboutPage and BreadcrumbList JSON-LD.
+A collapsible review panel under the preview bar lists the facts the client must confirm before it ships; it is
+staging-only and is not part of the production page. Sources and open items are in `docs/about-us/`.
 
 ## Deploy
 
