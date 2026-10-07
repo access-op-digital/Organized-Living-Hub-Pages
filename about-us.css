@@ -1,0 +1,51 @@
+/* About Us page. Extends closet-pages.css (and through it the approved Bedroom design contract). */
+.review-panel{background:var(--tint);border-bottom:1px solid var(--border);font-size:13px;padding:0 var(--pad)}
+.review-panel summary{max-width:var(--wrap);margin:auto;padding:10px 0;cursor:pointer;font-weight:600;color:var(--brand)}
+.review-panel ol{max-width:var(--wrap);margin:0 auto;padding:0 0 14px 20px}.review-panel li{line-height:1.6}
+.about-page .hero .intro{max-width:80ch}.about-page .hero .intro p{font-size:16px}.about-page .hero .intro p+p{margin-top:14px}
+.facts-band{padding-block:0;background:var(--white);border-bottom:1px solid var(--soft)}
+.fact-strip{margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.fact{padding:26px 18px;border-left:1px solid var(--soft);display:flex;flex-direction:column;justify-content:flex-start;gap:6px}.fact:first-child{border-left:0}
+.fact dt{font-size:13px;line-height:1.45}.fact dd{order:-1;margin:0;font:600 30px/1.1 var(--head);color:var(--brand);font-variant-numeric:tabular-nums}
+.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-grid .photo-card>img{height:320px}
+.software-copy{text-align:center;margin-top:40px;margin-bottom:0}
+.about-page .body-links{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:20px}
+.timeline{list-style:none;margin:48px auto 0;padding:0;max-width:92ch;position:relative}
+.timeline::before{content:'';position:absolute;left:88px;top:6px;bottom:6px;width:2px;background:var(--border)}
+.timeline li{display:grid;grid-template-columns:78px minmax(0,1fr);gap:40px;position:relative;padding-block:12px}
+.timeline li+li{margin-top:0}
+.timeline li::before{content:'';position:absolute;left:83px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--white);border:3px solid var(--brand)}
+.timeline .year{font:600 20px/1.4 var(--head);color:var(--brand);text-align:right;font-variant-numeric:tabular-nums}
+.timeline p{font-size:16px}
+.statements{gap:24px}.statement{background:var(--white);border:1px solid var(--border);padding:30px 32px}
+.statement .eyebrow{color:var(--brand);margin-bottom:10px}.statement p{font:500 22px/1.45 var(--head);color:var(--brand)}
+.values-intro{text-align:center;margin-top:40px}
+.values-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.values-grid .feature h3{font-size:22px;margin-bottom:12px}
+.split-reverse>img{order:2}
+.build-grid{margin-top:36px}.build-grid .feature h3{font-size:22px}
+.award-grid .award{background:var(--white);border:1px solid var(--border);padding:28px;display:flex;flex-direction:column;gap:10px}
+.award h3{font-size:22px}.award p{font-size:15px}
+.featured-line{text-align:center;margin:40px 0 24px}
+.team-grid .feature p{font-size:15px}
+.division-head{text-align:center;margin:48px auto 24px;max-width:80ch;display:flex;flex-direction:column;gap:10px}
+.division-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.division-grid .doc-card{padding:24px}.division-grid .doc-card h4{font:600 19px/1.35 var(--body);color:var(--brand)}
+.division-grid .kind{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.careers-line{flex-direction:column;align-items:center;gap:14px;text-align:center;margin-top:40px}
+.quote-card{margin:0;background:var(--white);border:1px solid var(--border);padding:30px;display:flex;flex-direction:column;gap:18px}
+.quote-card blockquote{margin:0}.quote-card blockquote p{font:500 21px/1.5 var(--head);color:var(--brand)}
+.quote-card figcaption{font-size:14px;display:flex;flex-direction:column;margin-top:auto}.quote-card figcaption strong{color:var(--brand)}
+.about-faq{max-width:960px;margin:auto}.about-faq summary h3{font:600 17px/1.5 var(--body);margin:0;color:var(--brand)}.about-faq .answer p{font-size:16px}
+.closing .route-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:20px}
+.closing .route-links a{color:var(--white);font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.closing .route-links a:hover{color:var(--white);opacity:.85}
+@media(max-width:1120px){.fact-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.fact:nth-child(4){border-left:0}.fact:nth-child(n+4){border-top:1px solid var(--soft)}.values-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.division-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1120px) and (min-width:641px){.values-grid,.division-grid{display:flex;flex-wrap:wrap;justify-content:center}.values-grid>*,.division-grid>*{flex:0 1 calc((100% - 48px) / 3)}.division-grid>*{flex-basis:calc((100% - 36px) / 3)}}
+@media(max-width:900px){.split-reverse>img{order:0}}
+@media(max-width:900px) and (min-width:641px){.award-grid,.quote-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:28px}.award-grid>*,.quote-grid>*{flex:0 1 calc((100% - 28px) / 2)}}
+@media(max-width:640px){.fact-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.fact{padding:18px 14px}.fact:nth-child(odd){border-left:0}.fact:nth-child(4){border-left:1px solid var(--soft)}.fact:nth-child(n+3){border-top:1px solid var(--soft)}.fact dd{font-size:22px}
+.product-grid{grid-template-columns:1fr}.product-grid .photo-card>img{height:240px}
+.timeline::before{left:6px}.timeline li{grid-template-columns:1fr;gap:4px;padding-left:30px}.timeline li::before{left:0;top:18px}.timeline .year{text-align:left}.timeline p{font-size:15px}
+.statement{padding:24px 22px}.statement p{font-size:19px}.values-grid,.division-grid{grid-template-columns:1fr}.quote-card blockquote p{font-size:19px}.review-panel{font-size:12px}}
+@media print{.review-panel{display:none}}
